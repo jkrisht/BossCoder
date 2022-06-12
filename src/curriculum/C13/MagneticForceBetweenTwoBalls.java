@@ -15,7 +15,6 @@ public class MagneticForceBetweenTwoBalls {
         }
 
         Arrays.sort(position);
-        System.out.println(Arrays.toString(position));
 
         if (m == 2) {
             return position[position.length - 1] - 1;
@@ -25,11 +24,10 @@ public class MagneticForceBetweenTwoBalls {
 
         int start = 0, end = position.length - 1;
         while (start <= end) {
-            int mid = (start + end) / 2;
+            int mid =  start +(end - start) / 2;
 
             if (isPossibleToArrange(position, mid, m)) {
                 result = mid;
-                System.out.println(result);
                 start = mid + 1;
             } else {
                 end = mid - 1;
@@ -40,18 +38,12 @@ public class MagneticForceBetweenTwoBalls {
     }
 
     public boolean isPossibleToArrange(int[] position, int distance, int ballsCount) {
-        System.out.println(distance + ", " + ballsCount);
         int previous = position[0];
         ballsCount--;
 
-        for (int i = 1; i < position.length; i++) {
+        for (int i = 1; i < position.length && ballsCount > 0; i++) {
             if (position[i] - previous >= distance) {
                 ballsCount--;
-
-                if (ballsCount == 0) {
-                    return true;
-                }
-
                 previous = position[i];
             }
         }

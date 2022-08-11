@@ -10,7 +10,7 @@ public class NthMagicalNumber {
         long left = Math.min(a, b);
         long right = n * left;
         long mod = (long) (Math.pow(10, 9) + 7);
-        long lcm = (a * b) / gcd(a, b);
+        long lcm = ((long) a * b) / gcd(a, b);
 
         while (left < right) {
             long mid = (left + right) / 2;

@@ -34,6 +34,9 @@ public class FindPeakElement {
             int mid = (start + end) / 2;
 
             if (mid >= 1 && nums[mid] > nums[mid - 1] && nums[mid] > nums[mid + 1]) {
+                System.out.println(nums[mid - 1]);
+                System.out.println(nums[mid + 1]);
+                System.out.println(mid);
                 return mid;
             } else if (mid >= 1 && nums[mid - 1] > nums[mid]) {
                 end = mid - 1;

@@ -1,9 +1,11 @@
 package curriculum.C6;
 
+import java.util.Arrays;
+
 // https://leetcode.com/problems/max-chunks-to-make-sorted-ii/discuss/1871104/Java-Solution-Beats-100-left-max-and-right-min-approach
 public class MaxChunksToMakeSortedII {
     public static void main(String[] args) {
-        int[] arr = {4,2,2,1,1};
+        int[] arr = {2,1,3,4,4};
         System.out.println(new MaxChunksToMakeSortedII().maxChunksToSortedWorkableSolution(arr));
     }
 
@@ -20,6 +22,7 @@ public class MaxChunksToMakeSortedII {
         for (int i = arr.length - 1; i >= 0; i--) {
             minArr[i] = Math.min(arr[i], minArr[i + 1]);
         }
+        System.out.println(Arrays.toString(minArr));
 
         int maxValue = arr[0];
 

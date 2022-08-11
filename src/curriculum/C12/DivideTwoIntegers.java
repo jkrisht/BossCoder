@@ -3,7 +3,7 @@ package curriculum.C12;
 public class DivideTwoIntegers {
     public static void main(String[] args) {
         int dividend = -2147483648, divisor = -1;
-        // System.out.println(new DivideTwoIntegers().divide(dividend, divisor));
+        System.out.println(new DivideTwoIntegers().divide(dividend, divisor));
     }
 
     public int smartApproach(int dividend, int divisor) {

@@ -1,9 +1,13 @@
 package curriculum.C12;
 
+import java.util.Arrays;
+
 // https://leetcode.com/problems/single-element-in-a-sorted-array/
 public class SingleElementInSortedArray {
     public static void main(String[] args) {
         int[] nums = {1, 1, 2, 3, 3, 4, 4, 8, 8};
+        System.out.println(nums.length);
+        System.out.println(nums.length / 2);
         System.out.println(new SingleElementInSortedArray().singleNonDuplicate(nums));
         System.out.println(new SingleElementInSortedArray().smartSolution(nums));
     }

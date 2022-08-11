@@ -12,6 +12,7 @@ public class FactorialTrailingZeroes {
 
         while (n > 0) {
             n /= 5;
+            System.out.println(n);
             count += n;
         }
 

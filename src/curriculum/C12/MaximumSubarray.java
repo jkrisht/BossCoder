@@ -1,5 +1,6 @@
 package curriculum.C12;
 
+// https://leetcode.com/problems/maximum-subarray/
 public class MaximumSubarray {
     public static void main(String[] args) {
         int[] nums = {-2, -1};

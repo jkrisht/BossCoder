@@ -9,7 +9,7 @@ public class FindTargetIndicesAfterSortingArray {
     public static void main(String[] args) {
         int[] nums = {2, 2, 2, 3, 2}; // 1,2,2,3,5,6,7
         int k = 3;
-        System.out.println(new FindTargetIndicesAfterSortingArray().targetIndices(nums, k));
+        // System.out.println(new FindTargetIndicesAfterSortingArray().targetIndices(nums, k));
         System.out.println(new FindTargetIndicesAfterSortingArray().superSmartApproach(nums, k));
     }
 

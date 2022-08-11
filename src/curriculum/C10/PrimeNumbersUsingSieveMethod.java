@@ -1,6 +1,11 @@
 package curriculum.C10;
 
+import java.util.ArrayList;
 import java.util.Arrays;
+import java.util.Collections;
+import java.util.Comparator;
+import java.util.HashMap;
+import java.util.Map;
 
 public class PrimeNumbersUsingSieveMethod {
     public static void main(String[] args) {
@@ -13,6 +18,10 @@ public class PrimeNumbersUsingSieveMethod {
         Arrays.fill(primes, 1);
         primes[0] = 0;
         primes[1] = 0;
+
+        HashMap<String, Integer> map = new HashMap();
+        ArrayList<Map.Entry<String, Integer>> list = new ArrayList<>(map.entrySet());
+        Collections.sort(list, Comparator.comparing(Map.Entry::getValue));
 
         for (int i = 2; i < Math.sqrt(num); i++) {
             if (primes[i] == 1) {
